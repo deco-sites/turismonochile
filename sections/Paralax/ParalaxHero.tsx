@@ -8,14 +8,15 @@ export interface Props {
 }
 
 export default function ParalaxHero({
-    backgroundImage,
-    image,
-    cloudImage
+  backgroundImage,
+  image,
+  cloudImage,
 }: Props) {
   return (
     <div>
-        <style
-            dangerouslySetInnerHTML={{ __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
                 @keyframes cloud-in-sky {
                     from {
                         transform: translateX(200%)
@@ -42,31 +43,38 @@ export default function ParalaxHero({
                     animation-timeline: view();
                     animation-range: exit;
                 }
-            `}}
-        ></style>
-        <div class="relative">
-            <div
-                style={{backgroundImage: 'url(' + backgroundImage + ')', zIndex: -20}}
-                class="max-w-full max-h-full w-full bg-fixed"
-            >
-                
-                {Array.from(Array(10), (e, i) => 
-                    <Image
-                        width={700}
-                        src={cloudImage ?? ""}
-                        alt={cloudImage ?? ""}
-                        style={{top: Math.random() * (200 - -400) + -400 + 'px', right: Math.random() * (800 - -2000) + -2000 + 'px'}}
-                        class={`fixed cloud-animation`}
-                    />
-                )}
-                <Image
-                    width={300}
-                    src={image}
-                    alt={image}
-                    class="max-w-full max-h-full w-full relative z-20 hero-hidden"
-                />
-            </div>
+            `,
+        }}
+      >
+      </style>
+      <div class="relative">
+        <div
+          style={{
+            backgroundImage: "url(" + backgroundImage + ")",
+            zIndex: -20,
+          }}
+          class="max-w-full max-h-full w-full bg-fixed"
+        >
+          {Array.from(Array(10), (e, i) => (
+            <Image
+              width={700}
+              src={cloudImage ?? ""}
+              alt={cloudImage ?? ""}
+              style={{
+                top: Math.random() * (200 - -400) + -400 + "px",
+                right: Math.random() * (800 - -2000) + -2000 + "px",
+              }}
+              class={`fixed cloud-animation`}
+            />
+          ))}
+          <Image
+            width={300}
+            src={image}
+            alt={image}
+            class="max-w-full max-h-full w-full relative z-20 hero-hidden"
+          />
         </div>
+      </div>
     </div>
   );
 }
