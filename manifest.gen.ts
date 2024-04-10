@@ -43,18 +43,19 @@ import * as $$$$$$31 from "./sections/Miscellaneous/CampaignTimer.tsx";
 import * as $$$$$$32 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$33 from "./sections/Miscellaneous/Slide.tsx";
 import * as $$$$$$34 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$35 from "./sections/Product/ImageGalleryFrontBack.tsx";
-import * as $$$$$$36 from "./sections/Product/NotFound.tsx";
-import * as $$$$$$37 from "./sections/Product/NotFoundChallenge.tsx";
-import * as $$$$$$38 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$39 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$40 from "./sections/Product/ProductShelfTabbed.tsx";
-import * as $$$$$$41 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$42 from "./sections/Product/ShelfWithImage.tsx";
-import * as $$$$$$43 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$44 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$45 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$46 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$35 from "./sections/Paralax/ParalaxHero.tsx";
+import * as $$$$$$36 from "./sections/Product/ImageGalleryFrontBack.tsx";
+import * as $$$$$$37 from "./sections/Product/NotFound.tsx";
+import * as $$$$$$38 from "./sections/Product/NotFoundChallenge.tsx";
+import * as $$$$$$39 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$40 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$41 from "./sections/Product/ProductShelfTabbed.tsx";
+import * as $$$$$$42 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$43 from "./sections/Product/ShelfWithImage.tsx";
+import * as $$$$$$44 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$45 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$46 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$47 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -97,23 +98,28 @@ const manifest = {
     "deco-sites/turismonochile/sections/Images/ShoppableBanner.tsx": $$$$$$28,
     "deco-sites/turismonochile/sections/Links/LinkTree.tsx": $$$$$$29,
     "deco-sites/turismonochile/sections/Links/Shortcuts.tsx": $$$$$$30,
-    "deco-sites/turismonochile/sections/Miscellaneous/CampaignTimer.tsx": $$$$$$31,
-    "deco-sites/turismonochile/sections/Miscellaneous/CookieConsent.tsx": $$$$$$32,
+    "deco-sites/turismonochile/sections/Miscellaneous/CampaignTimer.tsx":
+      $$$$$$31,
+    "deco-sites/turismonochile/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$32,
     "deco-sites/turismonochile/sections/Miscellaneous/Slide.tsx": $$$$$$33,
     "deco-sites/turismonochile/sections/Newsletter/Newsletter.tsx": $$$$$$34,
+    "deco-sites/turismonochile/sections/Paralax/ParalaxHero.tsx": $$$$$$35,
     "deco-sites/turismonochile/sections/Product/ImageGalleryFrontBack.tsx":
-      $$$$$$35,
-    "deco-sites/turismonochile/sections/Product/NotFound.tsx": $$$$$$36,
-    "deco-sites/turismonochile/sections/Product/NotFoundChallenge.tsx": $$$$$$37,
-    "deco-sites/turismonochile/sections/Product/ProductDetails.tsx": $$$$$$38,
-    "deco-sites/turismonochile/sections/Product/ProductShelf.tsx": $$$$$$39,
-    "deco-sites/turismonochile/sections/Product/ProductShelfTabbed.tsx": $$$$$$40,
-    "deco-sites/turismonochile/sections/Product/SearchResult.tsx": $$$$$$41,
-    "deco-sites/turismonochile/sections/Product/ShelfWithImage.tsx": $$$$$$42,
-    "deco-sites/turismonochile/sections/Product/Wishlist.tsx": $$$$$$43,
-    "deco-sites/turismonochile/sections/Social/InstagramPosts.tsx": $$$$$$44,
-    "deco-sites/turismonochile/sections/Social/WhatsApp.tsx": $$$$$$45,
-    "deco-sites/turismonochile/sections/Theme/Theme.tsx": $$$$$$46,
+      $$$$$$36,
+    "deco-sites/turismonochile/sections/Product/NotFound.tsx": $$$$$$37,
+    "deco-sites/turismonochile/sections/Product/NotFoundChallenge.tsx":
+      $$$$$$38,
+    "deco-sites/turismonochile/sections/Product/ProductDetails.tsx": $$$$$$39,
+    "deco-sites/turismonochile/sections/Product/ProductShelf.tsx": $$$$$$40,
+    "deco-sites/turismonochile/sections/Product/ProductShelfTabbed.tsx":
+      $$$$$$41,
+    "deco-sites/turismonochile/sections/Product/SearchResult.tsx": $$$$$$42,
+    "deco-sites/turismonochile/sections/Product/ShelfWithImage.tsx": $$$$$$43,
+    "deco-sites/turismonochile/sections/Product/Wishlist.tsx": $$$$$$44,
+    "deco-sites/turismonochile/sections/Social/InstagramPosts.tsx": $$$$$$45,
+    "deco-sites/turismonochile/sections/Social/WhatsApp.tsx": $$$$$$46,
+    "deco-sites/turismonochile/sections/Theme/Theme.tsx": $$$$$$47,
   },
   "apps": {
     "deco-sites/turismonochile/apps/decohub.ts": $$$$$$$$$$$0,
