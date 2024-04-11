@@ -16,7 +16,7 @@ export default function ParalaxHero({
   cloudImage,
   headingText,
   imageHeadingText,
-  starsAnimation = true
+  starsAnimation = true,
 }: Props) {
   return (
     <div>
@@ -81,11 +81,12 @@ export default function ParalaxHero({
         <div
           style={{
             backgroundImage: "url(" + backgroundImage + ")",
-            backgroundSize: '120%',
+            backgroundSize: "120%",
             zIndex: -20,
-            height: '300vh'
+            height: "300vh",
           }}
-          class={"max-w-full max-h-full w-full bg-fixed relative" + starsAnimation && 'stars'}
+          class={"max-w-full max-h-full w-full bg-fixed relative" +
+              starsAnimation && "stars"}
         >
           {cloudImage && Array.from(Array(10), (e, i) => (
             <Image
@@ -95,20 +96,20 @@ export default function ParalaxHero({
               style={{
                 top: Math.random() * (200 - -400) + -400 + "px",
                 right: Math.random() * (800 - -2000) + -2000 + "px",
-                zIndex: -10
+                zIndex: -10,
               }}
               class={`fixed cloud-animation`}
             />
           ))}
-          <h1 
+          <h1
             class="heading-animation text-[transparent] uppercase text-center font-bold text-[200px] fixed top-[15%] left-[10%]"
             style={{
               backgroundImage: "url(" + imageHeadingText + ")",
-              '-webkit-text-stroke': '.5vh #fff',
-              '-webkit-background-clip': 'text',
-              backgroundClip: 'text',
-              backgroundSize: 'cover',
-              backgroundPosition: 'top'
+              "-webkit-text-stroke": ".5vh #fff",
+              "-webkit-background-clip": "text",
+              backgroundClip: "text",
+              backgroundSize: "cover",
+              backgroundPosition: "top",
             }}
           >
             {headingText}
