@@ -8,6 +8,7 @@ export interface Props {
   headingText: string;
   imageHeadingText: ImageWidget;
   starsAnimation?: boolean;
+  description?: string;
 }
 
 export default function ParalaxHero({
@@ -17,6 +18,7 @@ export default function ParalaxHero({
   headingText,
   imageHeadingText,
   starsAnimation = true,
+  description
 }: Props) {
   return (
     <div>
@@ -37,14 +39,14 @@ export default function ParalaxHero({
 
                 @keyframes stars {
                   from {
-                      background-position: 0 100%;
+                    background-position: 0 100%;
                   }
                   to {
                     background-position: 100% 100%;
                   }
                 } 
                 .stars {
-                  animation: stars 60s linear infinite forwards;
+                  animation: stars 50s linear infinite forwards;
                 }
 
                 @keyframes hidden-hero {
@@ -63,7 +65,7 @@ export default function ParalaxHero({
                 }
 
                 @keyframes heading-animation {
-                  100% {
+                  50%, 100% {
                     left: 25%;
                     font-size: 260px;
                   }
@@ -71,6 +73,35 @@ export default function ParalaxHero({
 
                 .heading-animation {
                   animation: heading-animation linear forwards;
+                  animation-timeline: scroll();
+                }
+                
+                @keyframes description-animation {
+                  30% {
+                    opacity: 0;
+                  }
+                  50%, 100% {
+                    opacity: 1;
+                  }
+                }
+
+                .description-animation {
+                  opacity: 0;
+                  animation: description-animation linear forwards;
+                  animation-timeline: scroll();
+                }
+
+                @keyframes dot-animation {
+                  75% {
+                    box-shadow: 0 0 0 0;
+                  }
+                  100% {
+                    box-shadow: 0 0 1000000px 10000px;
+                  }
+                }
+
+                .dot {
+                  animation: dot-animation linear forwards;
                   animation-timeline: scroll();
                 }
             `,
@@ -83,7 +114,7 @@ export default function ParalaxHero({
             backgroundImage: "url(" + backgroundImage + ")",
             backgroundSize: "120%",
             zIndex: -20,
-            height: "300vh",
+            height: "700vh",
           }}
           class={"max-w-full max-h-full w-full bg-fixed relative" +
               starsAnimation && "stars"}
@@ -114,6 +145,13 @@ export default function ParalaxHero({
           >
             {headingText}
           </h1>
+          <p class="fixed w-full text-center text-white text-4xl top-[65%] description-animation">{description} <span class="dot" style={{
+            width: '4px',
+            height: '4px',
+            backgroundColor: '#fff',
+            position: 'absolute',
+            bottom: '5px'
+          }}></span></p>
           <Image
             width={300}
             src={image}
