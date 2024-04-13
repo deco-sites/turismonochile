@@ -18,7 +18,7 @@ export default function ParalaxHero({
   headingText,
   imageHeadingText,
   starsAnimation = true,
-  description
+  description,
 }: Props) {
   return (
     <div>
@@ -145,13 +145,20 @@ export default function ParalaxHero({
           >
             {headingText}
           </h1>
-          <p class="fixed w-full text-center text-white text-4xl top-[65%] description-animation">{description} <span class="dot" style={{
-            width: '4px',
-            height: '4px',
-            backgroundColor: '#fff',
-            position: 'absolute',
-            bottom: '5px'
-          }}></span></p>
+          <p class="fixed w-full text-center text-white text-4xl top-[65%] description-animation">
+            {description}{" "}
+            <span
+              class="dot"
+              style={{
+                width: "4px",
+                height: "4px",
+                backgroundColor: "#fff",
+                position: "absolute",
+                bottom: "5px",
+              }}
+            >
+            </span>
+          </p>
           <Image
             width={300}
             src={image}
