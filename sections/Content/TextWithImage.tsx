@@ -32,11 +32,33 @@ export default function Services({
   ],
 }: Props) {
   return (
-    <div class="bg-base-100 flex flex-col py-28">
+    <div class="relative z-30 bg-base-100 flex flex-col py-28 lg:px-10">
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+                @keyframes fade-in {
+                    from {
+                        transform: translateX(-10%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }   
+                .content {
+                    animation: fade-in linear both;
+                    animation-timeline: view(block);
+                    animation-range: cover 0% cover 40%;
+                }
+            `,
+        }}
+      >
+      </style>
       {services?.map((service, index) => (
         <div
           key={index}
-          class={`flex xl:container xl:mx-auto first:pt-0 py-12 lg:py-28 mx-5 md:mx-10 ${
+          class={`content flex xl:container xl:mx-auto first:pt-0 py-12 lg:py-28 mx-5 md:mx-10 ${
             PLACEMENT[service.placement]
           } gap-12 md:gap-20 text-left items-center justify-evenly`}
         >

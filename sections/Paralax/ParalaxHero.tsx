@@ -107,11 +107,11 @@ export default function ParalaxHero({
                 }
 
                 @keyframes dot-animation {
-                  75% {
+                  55% {
                     box-shadow: 0 0 0 0;
                   }
                   100% {
-                    box-shadow: 0 0 1000000px 10000px;
+                    box-shadow: 0 0 100000px 50000px;
                   }
                 }
 
@@ -129,7 +129,7 @@ export default function ParalaxHero({
             backgroundImage: "url(" + backgroundImage + ")",
             backgroundSize: "120%",
             zIndex: -20,
-            height: "700vh",
+            height: "1200vh",
           }}
           class={"max-w-full max-h-full w-full bg-fixed relative" +
               starsAnimation && "stars"}
