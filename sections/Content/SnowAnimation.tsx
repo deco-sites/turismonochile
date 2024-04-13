@@ -9,13 +9,12 @@ export interface Props {
   imageHeadingText: ImageWidget;
 }
 
-
 export default function SnowAnimation({
   backgroundImage,
   snowLayer1,
   snowLayer2,
   headingText,
-  imageHeadingText
+  imageHeadingText,
 }: Props) {
   return (
     <>
@@ -61,38 +60,40 @@ export default function SnowAnimation({
       >
       </style>
       <div class="relative z-20" style="box-shadow: 0 0 50px 100px #fff"></div>
+      <div
+        class={`max-w-full max-h-full w-full bg-fixed relative z-10`}
+      >
         <div
-          class={`max-w-full max-h-full w-full bg-fixed relative z-10`}
+          style={{
+            backgroundImage: "url(" + backgroundImage + ")",
+            backgroundSize: "auto",
+            zIndex: -20,
+            height: "200vh",
+            backgroundPosition: "top",
+          }}
+          class={"max-w-full max-h-full w-full bg-fixed relative py-24"}
         >
           <div
+            class={`snow-behind`}
+          />
+          <div
+            class={`snow`}
+          />
+          <h3
+            class="uppercase text-[transparent] text-center font-bold text-8xl lg:text-[120px] sticky top-[30%] w-full"
             style={{
-              backgroundImage: "url(" + backgroundImage + ")",
-              backgroundSize: "auto",
-              zIndex: -20,
-              height: "200vh",
-              backgroundPosition: "top"
+              backgroundImage: "url(" + imageHeadingText + ")",
+              "-webkit-text-stroke": ".5vh #000",
+              "-webkit-background-clip": "text",
+              backgroundClip: "text",
+              backgroundPosition: "center",
             }}
-            class={"max-w-full max-h-full w-full bg-fixed relative py-24"}
           >
-            <div
-              class={`snow-behind`}
-            />
-            <div
-              class={`snow`}
-            />
-            <h3 
-              class="uppercase text-[transparent] text-center font-bold text-8xl lg:text-[120px] sticky top-[30%] w-full"
-              style={{
-                backgroundImage: "url(" + imageHeadingText + ")",
-                "-webkit-text-stroke": ".5vh #000",
-                "-webkit-background-clip": "text",
-                backgroundClip: "text",
-                backgroundPosition: "center",
-              }}
-            >{headingText}</h3>
-          </div>
+            {headingText}
+          </h3>
         </div>
-        <div class="relative z-20" style="box-shadow: 0 0 50px 100px #fff"></div>
+      </div>
+      <div class="relative z-20" style="box-shadow: 0 0 50px 100px #fff"></div>
     </>
   );
 }
