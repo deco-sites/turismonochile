@@ -66,14 +66,23 @@ export default function ParalaxHero({
 
                 @keyframes heading-animation {
                   50%, 100% {
-                    left: 25%;
+                    left: 25vw;
                     font-size: 260px;
+                  }
+                }
+
+                @media(max-width: 1280px) {
+                  @keyframes heading-animation {
+                    50%, 100% {
+                      top: 40%;
+                    }
                   }
                 }
 
                 .heading-animation {
                   animation: heading-animation linear forwards;
                   animation-timeline: scroll();
+                  background-position: center;
                 }
                 
                 @keyframes description-animation {
@@ -89,6 +98,12 @@ export default function ParalaxHero({
                   opacity: 0;
                   animation: description-animation linear forwards;
                   animation-timeline: scroll();
+                }
+
+                @media(min-width: 1556px) {
+                  .description-animation {
+                    width: 87%;
+                  }
                 }
 
                 @keyframes dot-animation {
@@ -133,14 +148,13 @@ export default function ParalaxHero({
             />
           ))}
           <h1
-            class="heading-animation text-[transparent] uppercase text-center font-bold text-[200px] fixed top-[15%] left-[10%]"
+            class="heading-animation text-[transparent] uppercase text-center font-bold text-8xl lg:text-[200px] fixed top-[15%] left-[15vw]"
             style={{
               backgroundImage: "url(" + imageHeadingText + ")",
               "-webkit-text-stroke": ".5vh #fff",
               "-webkit-background-clip": "text",
               backgroundClip: "text",
               backgroundSize: "cover",
-              backgroundPosition: "top",
             }}
           >
             {headingText}
@@ -163,7 +177,7 @@ export default function ParalaxHero({
             width={300}
             src={image}
             alt={image}
-            class="max-w-full w-full fixed top-[-80px] z-20 hero-hidden"
+            class="max-w-none w-[300%] lg:w-full bottom-0 lg:bottom-[unset] fixed z-20 hero-hidden"
           />
         </div>
       </div>
