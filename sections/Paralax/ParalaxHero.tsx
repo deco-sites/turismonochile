@@ -65,7 +65,7 @@ export default function ParalaxHero({
                 }
 
                 @keyframes heading-animation {
-                  50%, 100% {
+                  25%, 100% {
                     left: 25vw;
                     font-size: 260px;
                   }
@@ -73,7 +73,7 @@ export default function ParalaxHero({
 
                 @media(max-width: 1280px) {
                   @keyframes heading-animation {
-                    50%, 100% {
+                    25%, 100% {
                       top: 40%;
                     }
                   }
@@ -86,10 +86,10 @@ export default function ParalaxHero({
                 }
                 
                 @keyframes description-animation {
-                  30% {
+                  10% {
                     opacity: 0;
                   }
-                  50%, 100% {
+                  25%, 100% {
                     opacity: 1;
                   }
                 }
@@ -107,11 +107,11 @@ export default function ParalaxHero({
                 }
 
                 @keyframes dot-animation {
-                  55% {
+                  25% {
                     box-shadow: 0 0 0 0;
                   }
                   100% {
-                    box-shadow: 0 0 100000px 50000px;
+                    box-shadow: 0 0 10000px 8000px;
                   }
                 }
 
@@ -129,9 +129,9 @@ export default function ParalaxHero({
             backgroundImage: "url(" + backgroundImage + ")",
             backgroundSize: "120%",
             zIndex: -20,
-            height: "1200vh",
+            height: "800vh",
           }}
-          class={"max-w-full max-h-full w-full bg-fixed relative" +
+          class={"max-w-full w-full bg-fixed relative" +
               starsAnimation && "stars"}
         >
           {cloudImage && Array.from(Array(10), (e, i) => (

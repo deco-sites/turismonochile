@@ -14,8 +14,8 @@ export interface Props {
 }
 
 const PLACEMENT = {
-  left: "flex-col lg:flex-row-reverse",
-  right: "flex-col lg:flex-row",
+  left: "flex-col lg:flex-row-reverse text-right",
+  right: "flex-col lg:flex-row text-left",
 };
 
 export default function Services({
@@ -72,7 +72,9 @@ export default function Services({
           />
           <div class="w-full lg:w-1/2 flex-1 space-y-2 lg:space-y-4 lg:max-w-xl gap-4">
             {service.type && <p>{service.type}</p>}
-            <p class="text-base-content text-[36px] md:text-[48px] leading-[120%] font-bold">
+            <p class={`text-base-content text-[36px] md:text-[48px] leading-[120%] font-bold ${
+            PLACEMENT[service.placement]
+          }`}>
               {service.label}
             </p>
             <p
