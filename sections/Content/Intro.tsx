@@ -19,7 +19,7 @@ export default function Intro(
       "Lorem ipsum dolor sit amet consectetur. Placerat ornare diam nulla fringilla gravida justo elementum. Ut sed in.",
     subheading,
     alignment = "Left",
-    imageHeadingText
+    imageHeadingText,
   }: IntroProps,
 ) {
   return (
@@ -28,16 +28,17 @@ export default function Intro(
         <div
           class={`flex flex-col gap-6 ${ALIGNMENT_TEXT[alignment ?? "Left"]}`}
         >
-          <h1 class="font-bold text-[transparent] text-8xl lg:text-[140px] leading-[120%]"
-          style={{
-            backgroundImage: "url(" + imageHeadingText + ")",
-            "-webkit-text-stroke": ".5vh #fff",
-            "-webkit-background-clip": "text",
-            backgroundClip: "text",
-            backgroundSize: "cover",
-            backgroundPosition: "bottom",
-            backgroundAttachment: "fixed"
-          }}
+          <h1
+            class="font-bold text-[transparent] text-8xl lg:text-[140px] leading-[120%]"
+            style={{
+              backgroundImage: "url(" + imageHeadingText + ")",
+              "-webkit-text-stroke": ".5vh #fff",
+              "-webkit-background-clip": "text",
+              backgroundClip: "text",
+              backgroundSize: "cover",
+              backgroundPosition: "bottom",
+              backgroundAttachment: "fixed",
+            }}
           >
             {text}
           </h1>
