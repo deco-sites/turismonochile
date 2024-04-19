@@ -156,7 +156,7 @@ function Banner(
         />
         <img
           width={640}
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover rounded-xl grow"
           src={srcMobile}
           alt={alt}
           decoding="async"
@@ -188,7 +188,29 @@ export default function Gallery(props: Props) {
       : "sm:row-span-2";
 
   return (
-    <section class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
+    <section class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-10 relative z-10">
+       <style
+        dangerouslySetInnerHTML={{
+          __html: `
+                @keyframes grow {
+                    from {
+                        transform: scale(0);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }   
+                .grow {
+                    animation: grow linear both;
+                    animation-timeline: view(block);
+                    animation-range: cover 0% cover 40%;
+                }
+            `,
+        }}
+      >
+      </style>
       <Header
         title={title}
         description={description}

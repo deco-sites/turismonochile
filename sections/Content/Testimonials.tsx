@@ -133,7 +133,30 @@ export default function Testimonials(
   };
 
   return (
-    <div class="w-full container px-4 py-8 flex flex-col gap-14 lg:gap-20 lg:py-10 lg:px-0">
+    <>
+    <style
+        dangerouslySetInnerHTML={{
+          __html: `
+                @keyframes show {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }   
+                .show {
+                    animation: show linear both;
+                    animation-timeline: view(block);
+                    animation-range: cover 0% cover 40%;
+                }
+            `,
+        }}
+      >
+      </style>
+    <div class="w-full show container px-4 py-8 flex flex-col gap-14 lg:gap-20 lg:py-28 lg:px-10 relative z-10 items-center justify-center"
+      style={{height: testimonials?.length === 0 ? '100vh' : ''}}
+    >
       <Header
         title={title}
         description={description}
@@ -179,5 +202,7 @@ export default function Testimonials(
         </div>
       )}
     </div>
+    </>
+
   );
 }
