@@ -189,7 +189,7 @@ export default function Gallery(props: Props) {
 
   return (
     <section class="container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-10 relative z-10">
-       <style
+      <style
         dangerouslySetInnerHTML={{
           __html: `
                 @keyframes grow {

@@ -134,7 +134,7 @@ export default function Testimonials(
 
   return (
     <>
-    <style
+      <style
         dangerouslySetInnerHTML={{
           __html: `
                 @keyframes show {
@@ -154,55 +154,55 @@ export default function Testimonials(
         }}
       >
       </style>
-    <div class="w-full show container px-4 py-8 flex flex-col gap-14 lg:gap-20 lg:py-28 lg:px-10 relative z-10 items-center justify-center"
-      style={{height: testimonials?.length === 0 ? '100vh' : ''}}
-    >
-      <Header
-        title={title}
-        description={description}
-        alignment={layout?.headerAlignment || "center"}
-      />
+      <div
+        class="w-full show container px-4 py-8 flex flex-col gap-14 lg:gap-20 lg:py-28 lg:px-10 relative z-10 items-center justify-center"
+        style={{ height: testimonials?.length === 0 ? "100vh" : "" }}
+      >
+        <Header
+          title={title}
+          description={description}
+          alignment={layout?.headerAlignment || "center"}
+        />
 
-      {layout?.variation === "Grid" && (
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {testimonials?.map(({ image, text, user }) => (
-            <Testimonal image={image} text={text} user={user} />
-          ))}
-        </div>
-      )}
-
-      {layout?.variation !== "Grid" && (
-        <div
-          class="relative w-full px-8"
-          id={id}
-        >
-          <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5 w-full">
-            {testimonials?.map(({ image, text, user }, index) => (
-              <Slider.Item
-                index={index}
-                class="flex flex-col gap-4 carousel-item w-full"
-              >
-                <Testimonal image={image} text={text} user={user} />
-              </Slider.Item>
+        {layout?.variation === "Grid" && (
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            {testimonials?.map(({ image, text, user }) => (
+              <Testimonal image={image} text={text} user={user} />
             ))}
-          </Slider>
-          <>
-            <div class="z-10 absolute -left-2 lg:-left-8 top-1/2">
-              <Slider.PrevButton class="btn btn-circle btn-outline">
-                <Icon size={24} id="ChevronLeft" strokeWidth={3} />
-              </Slider.PrevButton>
-            </div>
-            <div class="z-10 absolute -right-2 lg:-right-8 top-1/2">
-              <Slider.NextButton class="btn btn-circle btn-outline">
-                <Icon size={24} id="ChevronRight" strokeWidth={3} />
-              </Slider.NextButton>
-            </div>
-          </>
-          <SliderJS rootId={id} />
-        </div>
-      )}
-    </div>
-    </>
+          </div>
+        )}
 
+        {layout?.variation !== "Grid" && (
+          <div
+            class="relative w-full px-8"
+            id={id}
+          >
+            <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5 w-full">
+              {testimonials?.map(({ image, text, user }, index) => (
+                <Slider.Item
+                  index={index}
+                  class="flex flex-col gap-4 carousel-item w-full"
+                >
+                  <Testimonal image={image} text={text} user={user} />
+                </Slider.Item>
+              ))}
+            </Slider>
+            <>
+              <div class="z-10 absolute -left-2 lg:-left-8 top-1/2">
+                <Slider.PrevButton class="btn btn-circle btn-outline">
+                  <Icon size={24} id="ChevronLeft" strokeWidth={3} />
+                </Slider.PrevButton>
+              </div>
+              <div class="z-10 absolute -right-2 lg:-right-8 top-1/2">
+                <Slider.NextButton class="btn btn-circle btn-outline">
+                  <Icon size={24} id="ChevronRight" strokeWidth={3} />
+                </Slider.NextButton>
+              </div>
+            </>
+            <SliderJS rootId={id} />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
