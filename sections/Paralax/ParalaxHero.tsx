@@ -65,7 +65,7 @@ export default function ParalaxHero({
                 }
 
                 @keyframes heading-animation {
-                  20%, 100% {
+                  15%, 100% {
                     left: 25vw;
                     font-size: 260px;
                   }
@@ -73,7 +73,7 @@ export default function ParalaxHero({
 
                 @media(max-width: 1280px) {
                   @keyframes heading-animation {
-                    20%, 100% {
+                    15%, 100% {
                       top: 40%;
                     }
                   }
@@ -89,7 +89,7 @@ export default function ParalaxHero({
                   10% {
                     opacity: 0;
                   }
-                  20%, 100% {
+                  15%, 100% {
                     opacity: 1;
                   }
                 }
@@ -107,7 +107,7 @@ export default function ParalaxHero({
                 }
 
                 @keyframes dot-animation {
-                  20% {
+                  15% {
                     box-shadow: 0 0 0 0;
                   }
                   100% {
